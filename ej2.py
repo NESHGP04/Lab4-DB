@@ -10,6 +10,7 @@ import os
 load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
+CLIENT=os.getenv("CLIENT")
 
 try:
     # ----------------------------
@@ -38,7 +39,7 @@ try:
     # ----------------------------
     # MONGO
     # ----------------------------
-    client = MongoClient("mongodb+srv://marines92004_db_user:1rSlXzhhSQ35Rllu@lab4.p8jo6kd.mongodb.net/")
+    client = MongoClient(CLIENT)
     db = client["lab4"]
 
     # Extraer Big Mac
